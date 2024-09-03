@@ -115,12 +115,108 @@ Use print if you need the return value.
     // Casting
     // If you want to change the data type of an existing variable, but not by changing the value, you can use casting.
     // Casting allows you to change data type on variables:
-    $x = 5;
-    $x = (string) $x;
-    var_dump($x);
+    // $x = 5;
+    // $x = (string) $x;
+    // var_dump($x);
 ?>
 
 
+
+<!-- *********************************************************************************************************************** -->
+<!-- String -->
+ 
+<?php 
+    // difference between double quotes and single quotes is 
+    // Double quoted string literals perform operations for special characters:
+    $x = "John";
+    echo "Hello $x";
+
+    // Single quoted strings does not perform such actions, it returns the string like it was written, with the variable name:
+    $x = "John";
+    echo 'Hello $x';
+
+    // string length function 
+    echo strlen($x);
+
+    // counts the number of words in a string
+    echo "<br/>";
+    echo str_word_count("Hello world!");
+    
+    // Search for text :- If a match is found, the function returns the character position of the first match. If no match is found, it will return FALSE.
+    echo "<br/>";
+    echo strpos("Hello world!", "world");
+
+    // The strtoupper() function returns the string in upper case:
+    echo "<br/>";
+    $x = "Hello World!";
+    echo strtoupper($x);
+
+    // The strtolower() function returns the string in lower case:
+    echo "<br/>";
+    $x = "Hello World!";
+    echo strtolower($x);
+
+    // Replace the text "World" with "Dolly":
+    echo "<br/>";
+    $x = "Hello World!";
+    echo str_replace("World", "Dolly", $x);
+
+    // Reverse the string "Hello World!":
+    echo "<br/>";
+    $x = "Hello World!";
+    echo strrev($x);
+
+    // The trim() removes any whitespace from the beginning or the end:
+    echo "<br/>";
+    $x = " Hello World! ";
+    echo trim($x);
+
+    // ____________________________________________________________________________________________________________
+
+    // The PHP explode() function splits a string into an array.
+    // The first parameter of the explode() function represents the "separator". The "separator" specifies where to split the string.
+    // Note: The separator is required. 
+    echo "<br/>";
+    $x = "Hello World!";
+    $y = explode(" ", $x);
+
+    //Use the print_r() function to display the result:
+    print_r($y);
+
+    // *************************************
+    // String Concatenation
+
+    // The result of the example above is HelloWorld, without a space between the two words.
+    echo "<br/>";
+    $x = "Hello";
+    $y = "World";
+    $z = $x . $y;
+    echo $z;
+
+    // You can add a space character like this:
+    echo "<br/>";
+    $z = $x . " " . $y;
+    echo $z;
+
+    echo "<br/>";
+    $z = "$x $y"; // Best way 
+    echo $z;
+
+
+    // String Slice
+    // Slicing
+    // You can return a range of characters by using the substr() function.
+    // Specify the start index and the number of characters you want to return.
+
+    // Start the slice at index 6 and end the slice 5 positions later:
+    echo "<br/>";
+    $x = "Hello World!";
+    echo substr($x, 6, 5);
+
+    $x = "Hello World!";
+    echo substr($x, 6); //By leaving out the length parameter, the range will go to the end:
+
+?>
 
 </body>
 </html>
