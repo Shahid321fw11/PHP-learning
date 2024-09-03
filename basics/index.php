@@ -213,8 +213,129 @@ Use print if you need the return value.
     $x = "Hello World!";
     echo substr($x, 6, 5);
 
+    echo "<br/>";
     $x = "Hello World!";
     echo substr($x, 6); //By leaving out the length parameter, the range will go to the end:
+
+    echo "<br/>";
+
+    // --------------------------------------------------------------------------------------------------------------
+    // PHP - Escape Characters
+    // To insert characters that are illegal in a string, use an escape character.
+    // An escape character is a backslash \ followed by the character you want to insert.
+
+    // \n : Newline
+    // \r : Carriage return
+    // \t : Tab
+    // \\ : Backslash
+    // \$ : Dollar sign
+    // \" : Double quote (inside double-quoted strings)
+    // \' : Single quote (inside single-quoted strings)
+    // \u{XXXX} : Unicode character (e.g., \u{1F600} for 😀)
+
+    // _______________________________________________________________________________________________________________________________________
+    // PHP Numbers
+    // types in PHP:
+
+    // Integer  $a = 5;
+    // Float $b = 5.34;
+    // Number Strings $c = "25";
+    // Infinity
+    // NaN
+
+    // ------------------------------------------------------------------------------
+    // PHP Integers
+    // A float is a number with a decimal point or a number in exponential form.
+    // is_float(): Checks if a variable is a float.
+
+    // PHP_FLOAT_MAX: Largest float.
+    // PHP_FLOAT_MIN: Smallest positive float.
+    // PHP_FLOAT_DIG: Precision limit.
+    // PHP_FLOAT_EPSILON: Smallest number x where x + 1.0 != 1.0.
+
+    // ____________________________________________________________
+
+    // PHP Infinity
+    // A numeric value that is larger than PHP_FLOAT_MAX is considered infinite.
+    // is_finite()
+    // is_infinite()
+
+
+    // PHP NaN
+    // NaN stands for Not a Number.
+    // is_nan()
+
+    // ***********************************************************************************************************
+    // PHP Numerical Strings
+    // The PHP is_numeric() function can be used to find whether a variable is numeric.
+    // The function returns true if the variable is a number or a numeric string, false otherwise.
+
+    //  --------------------------------------------
+
+    // PHP Casting
+
+    // Sometimes you need to change a variable from one data type into another, and sometimes you want a variable to have a specific data type.
+    // This can be done with casting.
+
+    // (string) - Converts to data type String
+    // (int) - Converts to data type Integer
+    // (float) - Converts to data type Float
+    // (bool) - Converts to data type Boolean
+    // (array) - Converts to data type Array
+    // (object) - Converts to data type Object
+    // (unset) - Converts to data type NULL
+
+
+    // **************************************************
+    // Php Math
+
+    // The pi() function returns the value of PI:
+    // The min() and max() functions can be used to find the lowest or highest value in a list of arguments:
+    // echo(min(0, 150, 30, 20, -8, -200));
+    // echo(max(0, 150, 30, 20, -8, -200));
+
+    // The abs() function returns the absolute (positive) value of a number:
+    // echo(abs(-6.7));
+
+    // PHP sqrt() Function
+    // echo(sqrt(64));
+
+    // PHP round() Function
+    // The round() function rounds a floating-point number to its nearest integer:
+
+    echo(round(0.60));
+    echo "<br>";
+    echo(round(0.49));
+
+
+
+
+    echo "<br>";
+    // Random Numbers
+    // The rand() function generates a random number:
+    echo(rand());
+    echo "<br>";
+    echo(rand(10, 100)); // for more controlle we can add min and max.
+
+
+    // *******************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
 
