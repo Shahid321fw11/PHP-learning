@@ -321,20 +321,216 @@ Use print if you need the return value.
     // *******************************************************************************************************
 
 
+    // PHP Constants
+    // Constants are like variables, except that once they are defined they cannot be changed or undefined.
+    // A valid constant name starts with a letter or underscore (no $ sign before the constant name).
+    // Note: Unlike variables, constants are automatically global across the entire script.
+
+    // Syntax
+    // define(name, value);
+    // define("GREETING", "Welcome to W3Schools.com!");
+    // echo GREETING;
+    // You can also create a constant by using the const keyword.
+    // const MYCAR = "Volvo";
+    // echo MYCAR;
+    // const vs. define()
+
+    // const cannot be created inside another block scope, like inside a function or inside an if statement.
+    // define can be created inside another block scope.
+    // Constants are automatically global and can be used across the entire script.
+
+    // ********************************************************************************************************** 
+
+    // PHP Magic Constants
+    // PHP has nine predefined constants that change value depending on where they are used, and therefor they are called "magic constants".
+    // __CLASS__	If used inside a class, the class name is returned.	
+    // __DIR__	The directory of the file.	
+    // __FILE__	The file name including the full path.	
+    // __FUNCTION__	If inside a function, the function name is returned.	
+    // __LINE__	The current line number.	
+    // __METHOD__	If used inside a function that belongs to a class, both class and function name is returned.	
+    // __NAMESPACE__	If used inside a namespace, the name of the namespace is returned.	
+    // __TRAIT__	If used inside a trait, the trait name is returned.	
+    // ClassName::class	Returns the name of the specified class and the name of the namespace, if any.
+
+    // ********************************************************************************************************** 
+
+    // PHP Operators
+    // PHP divides the operators in the following groups:
+
+    // Arithmetic operators
+    // Assignment operators
+    // Comparison operators
+    // Increment/Decrement operators
+    // Logical operators
+    // String operators
+    // Array operators
+    // Conditional assignment operators
 
 
+    // PHP Arithmetic Operators
+    // +	Addition	$x + $y		
+    // -	Subtraction	$x - $y		
+    // *	Multiplication	$x * $y		
+    // /	Division	$x / $y		
+    // %	Modulus	$x % $y		
+    // **	Exponentiation	$x ** $y
+
+    // PHP Assignment Operators
+    // x = y	x = y		
+    // x += y	x = x + y	
+    // x -= y	x = x - y	
+    // x *= y	x = x * y	
+    // x /= y	x = x / y	
+    // x %= y	x = x % y
+
+    // PHP Comparison Operators
+    // ==	Equal	$x == $y		
+    // ===	Identical	$x === $y	
+    // !=	Not equal	$x != $y	
+    // <>	Not equal	$x <> $y	
+    // !==	Not identical	$x !== $y		
+    // >	Greater than	$x > $y		
+    // <	Less than	$x < $y		
+    // >=	Greater than or equal to	$x >= $y		
+    // <=	Less than or equal to	$x <= $y	
+    // <=>	Spaceship	$x <=> $y
+
+    // PHP Increment / Decrement Operators
+    // ++$x	Pre-increment		
+    // $x++	Post-increment		
+    // --$x	Pre-decrement		
+    // $x--	Post-decrement	
+
+    // PHP Logical Operators
+    // and	And	$x and $y	True if both $x and $y are true	
+    // or	Or	$x or $y	True if either $x or $y is true	
+    // xor	Xor	$x xor $y	True if either $x or $y is true, but not both	
+    // &&	And	$x && $y	True if both $x and $y are true	
+    // ||	Or	$x || $y	True if either $x or $y is true	
+    // !	Not	!$x	        True if $x is not true
+
+    // PHP String Operators
+    // .	Concatenation	            $txt1 . $txt2	    Concatenation of $txt1 and $txt2	
+    // .=	Concatenation assignment	$txt1 .= $txt2	    Appends $txt2 to $txt1
+
+    // PHP Array Operators
+    // +	Union	        $x + $y	            Union of $x and $y	
+    // ==	Equality	    $x == $y	        Returns true if $x and $y have the same key/value pairs	
+    // ===	Identity	    $x === $y	        Returns true if $x and $y have the same key/value pairs in the same order and of the same types	
+    // !=	Inequality	    $x != $y	        Returns true if $x is not equal to $y	
+    // <>	Inequality	    $x <> $y	        Returns true if $x is not equal to $y	
+    // !==	Non-identity	$x !== $y	        Returns true if $x is not identical to $y
 
 
+    // PHP Conditional Assignment Operators
+    // ?:	Ternary	            $x = expr1 ? expr2 : expr3
+    // ??	Null coalescing	    $x = expr1 ?? expr2
+
+    // ********************************************************************************************************** 
+
+    // PHP Conditional Statements
+    // if statement - executes some code if one condition is true
+    // if...else statement - executes some code if a condition is true and another code if that condition is false
+    // if...elseif...else statement - executes different codes for more than two conditions
+    // switch statement - selects one of many blocks of code to be executed
+
+    // if (5 > 3) {
+    // echo "Have a good day!";
+    // }
+
+    // PHP - The if...else Statement
+    // if (condition) {
+    // // code to be executed if condition is true;
+    // } else {
+    // // code to be executed if condition is false;
+    // }
+
+    // PHP - The if...elseif...else Statement
+    // if (condition) {
+    // code to be executed if this condition is true;
+    // } elseif (condition) {
+    // // code to be executed if first condition is false and this condition is true;
+    // } else {
+    // // code to be executed if all conditions are false;
+    // }
+
+    // PHP Shorthand if Statements
+    // One-line if statement:
+    // $a = 5;
+    // if ($a < 10) $b = "Hello";
+    // echo $b
 
 
+    // One-line if...else statement:
+    // $a = 13;
+    // $b = $a < 10 ? "Hello" : "Good Bye";
+    // echo $b;
 
 
+    // ********************************************************************************************************** 
 
+    // PHP switch Statement
+    // The switch statement is used to perform different actions based on different conditions.
+    // $favcolor = "red";
 
+    // switch ($favcolor) {
+    // case "red":
+    //     echo "Your favorite color is red!";
+    //     break;
+    // case "blue":
+    //     echo "Your favorite color is blue!";
+    //     break;
+    // case "green":
+    //     echo "Your favorite color is green!";
+    //     break;
+    // default:
+    //     echo "Your favorite color is neither red, blue, nor green!";
+    // }
 
+    // ********************************************************************************************************** 
 
+    // PHP Loops
+    // In PHP, we have the following loop types:
 
+    // while - loops through a block of code as long as the specified condition is true
+    // do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true
+    // for - loops through a block of code a specified number of times
+    // foreach - loops through a block of code for each element in an array
 
+    // The PHP while Loop
+    // $i = 1;
+    // while ($i < 6) {
+    // echo $i;
+    // $i++;
+    // }
+
+    // The PHP do...while Loop
+    // $i = 1;
+    // do {
+    // echo $i;
+    // $i++;
+    // } while ($i < 6);
+
+    // The PHP for Loop
+    // The for loop is used when you know how many times the script should run.
+    // This is how it works:
+
+    // expression1 is evaluated once
+    // expression2 is evaluated before each iteration
+    // expression3 is evaluated after each iteration
+
+    // for ($x = 0; $x <= 10; $x++) {
+    // echo "The number is: $x <br>";
+    // }
+
+    // The foreach Loop on Arrays
+    // $colors = array("red", "green", "blue", "yellow");
+    // foreach ($colors as $x) {
+    // echo "$x <br>";
+    // }
+
+    // ********************************************************************************************************** 
 
 
 ?>
