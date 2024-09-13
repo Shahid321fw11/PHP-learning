@@ -17,25 +17,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Signup</title>
-</head>
-<body>
-    <h2>Sign Up</h2>
-    <form method="POST" action="">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center mt-5">Sign Up</h2>
+        <form method="POST" action="index.php?page=signup">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" id="username" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-
-        <button type="submit">Sign Up</button>
-    </form>
-</body>
-</html>
+        <div class="text-center mt-3">
+            <p>Already have an account? <a href="index.php?page=login" class="btn btn-primary w-100">Login</a></p>
+        </div>
+    </div>
+</div>
